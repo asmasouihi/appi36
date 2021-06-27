@@ -1,0 +1,24 @@
+body{font-size: large;
+    background-color: #8f860a;
+    display: flex;
+    justify-content: center;
+} 
+
+#CIN{
+    margin-left: 108px;
+    margin-top: 20px;
+}
+#mail{
+    margin-left: 28px;
+    margin-top: 20px;
+}
+.item5{margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.mode1{
+    margin-right: 200px;
+}
+.item4{
+    margin-top: 20px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+        
+           
+           
+               
+        </head>
+        <body> 
+          <form onsubmit="return verrif()">
+
+
+            <fieldset>
+                <legend>  <h2>Inscription</h2></legend>
+            <div id="formulair">
+                
+                    <div class="container">
+                        <div class="item1">
+                            <label for="">Prénom et Nom * :</label>
+                            <input type="text" name="name" id="name"required pattern='[A-z" "]{6,20}'>
+                   
+
+                        </div>
+                        <div class="item2">
+                            <label for="">CIN * :</label>
+                            <input  id="CIN" style="width: 100px;"  type="text" name="CIN"required pattern="[0-9]{8}"id="CIN" > 
+                   
+                        </div>
+                        <div class="item3">
+                            <label for="">Adresse mail * :</label>
+                            <input type="email" required pattern="[A-z0-9._-]+[@]{1}[a0-z]{2.10}" >
+                   
+                        </div>
+                         <div class="item4">
+                             <label for="">Niveau scolaire:</label>
+                             <input type="radio" required name="title" id="r" value="" checked><label for="r1">Secondaire</label>
+                             <input type="radio" required name="title" id="r" value=""><label for="r2"> Universitaire</label>
+                           <input type="radio"required name="title" id="r" value=""><label for="r3">Autre</label>
+                   
+                         </div>
+                         <div class="item5">
+                             <div class="mode">
+                                <label for="">Modules de formation:</label>
+                             </div>
+                             <div class="mode1">
+                                <select multiple> 
+                                    <option value="">HTML5 </option>
+                                    <option value="">CSS3</option>
+                                    <option value="">Javascript</option> 
+                                    <option value="">JQuery</option> 
+                       
+                                 </select> 
+                             </div>
+                         </div>
+                       <p>(*) Champs obligatoires</p>
+                   
+                    </div>
+                    <input type="submit" value="envoyer" onclick="return verif ()">
+                    <input type="submit" value="annuler">
+                    
+                    
+                </fieldset>
+                <script  language="javascript" >
+                    function verif ()
+                  {  
+                      //**nom prenom
+                    a = formulair.name.value;
+                    exp=/^[A-Z]{1}[a-z ]+$/;
+                    if(exp.test(a)==false ) 
+                   {
+                   alert ("vérifier votre Nom et Prénom sont incorrect!");
+                    return false;
+                    
+                  
+                  }
+                  //**CIN
+                  else if (formulair.CIN.value.length !=8)
+                  {
+                    alert ("vérifier votre CIN est incorrect!");
+                    return false;
+                  }
+                  //**email
+                  
+                  else if((formulair.email.value.indexOf('@')== -1)||(formulaire.email.value.indexOf('.')< 0 ) )
+                  { 
+                  alert("vérifier votre email est incorrect!");
+                  return false;
+                  }
+                  //**niveau scolaire
+                  else if ((!formulair.r[0].checked)&&(formulaire.r[1].checked==false)&&(formulaire.r[2].checked==false))
+                  {alert ("choisir une formation ");
+                  return false; }
+                  
+
+                }
+               </script>
+                   </body>
+                   </html>
+                   

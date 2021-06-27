@@ -1,0 +1,13 @@
+bOdy{margin: 0; padding: 0;background-color: beige;}
+#GRILLE{ display: grid ; grid-template-columns: 1fr 2fr;background-color:  blueviolet;width:90%; height: 600px;margin: auto;
+}
+
+header{background-color: rgb(46, 45, 44); grid-column: 1/ span 2;}
+nav{background-color: rgb(99, 97, 92);}
+article{background-color: darkgrey;}
+footer{background-color: rgb(97, 105, 105); grid-column: 1 / span 2;}.content
+{text-align: center;
+padding: 20px; font-size: 20px;font-weight: bold;border: 1px solid black}
+
+h1{font-style: oblique;background-color: rgb(133, 131, 129);font-family: 10px;}
+H1{margin-right: 20PX;}
